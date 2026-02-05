@@ -5,7 +5,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "$npm_execpath run build && vite preview",
-    "deploy": "$npm_execpath run build && wrangler pages deploy dist --project-name pablo-web"
+    "deploy": "$npm_execpath run build && wrangler pages deploy dist --project-name pablo-web",
+    "lint": "eslint .",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
   },
   "dependencies": {
     "react": "19.0.0",
@@ -13,11 +16,21 @@
     "react-router-dom": "^7.9.2"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250210.0",
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^25.2.0",
     "@types/react": "19.0.10",
     "@types/react-dom": "19.0.4",
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
     "@vitejs/plugin-react": "5.0.0",
-    "@cloudflare/workers-types": "^4.20250210.0",
     "babel-plugin-react-compiler": "^1.0.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.0",
+    "prettier": "^3.8.1",
     "vite": "^6.3.5",
     "wrangler": "^4.17.0"
   }

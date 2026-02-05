@@ -10,8 +10,7 @@
       "DOM",
       "WebWorker"
     ],
-    "types": ["vite/client", "@cloudflare/workers-types"],
     "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx"
+    "types": ["vite/client", "@cloudflare/workers-types", "node"]
   },
 }

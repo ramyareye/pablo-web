@@ -1,5 +1,5 @@
-import type { PagesFunction } from "@cloudflare/workers-types";
+import type { PagesFunction, Request as CfRequest } from "@cloudflare/workers-types";
 import { proxyToPabloApi, type Env } from "./_proxy";
 
 export const onRequest: PagesFunction<Env> = async ({ request, env }) =>
-  proxyToPabloApi(request, env, "/api/reports/detentions");
+  proxyToPabloApi(request as unknown as CfRequest, env, "/api/reports/detentions");
